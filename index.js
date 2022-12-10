@@ -33,7 +33,7 @@ const questions = () => {
         type: 'list',
         name: 'License',
         message: 'What license are you useing?',
-        choices: ['MIT', 'GNU', 'Apache', 'Mozilla Public', 'no license'],
+        choices: ['MIT', 'GNU', 'Apache', 'Mozilla Public', 'None'],
       },
       {
         type: 'input',
@@ -56,10 +56,11 @@ const questions = () => {
         message: 'What is your email address?'
       }
     ])
-};
+    .then((data) =>{writeToFile(data);}
+)};
+
 // TODO: Create a function to write README file
-function writeToFile(data) {
-        const writetoFile =     
+function writeToFile(data) {   
         fs.writeFile('./New/README.md', generateMarkdown(data), (err) =>
         err ? console.log(err) : console.log('Successfully created README.md in New folder!!')
         )
@@ -67,8 +68,7 @@ function writeToFile(data) {
 
 // TODO: Create a function to initialize app
     function init() {
-     questions(data)
-     writeToFile();
+     questions()
 };
 
 // Function call to initialize app
