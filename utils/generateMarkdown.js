@@ -2,13 +2,13 @@
 // If there is no License, return an empty string
   const renderLicenseBadge = License => {
     if (License === 'MIT') {
-      return '[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      return '![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)';
     } else if (License === 'Apache') {
-      return '[![License: Apache](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+      return '![License: Apache](https://img.shields.io/badge/license-Apache_2.0-blue.svg)';
     } else if (License === 'Mozilla Public') {
-      return '[![License: Mozilla](https://img.shields.io/badge/license-Mozilla-red.svg)](https://www.mozilla.org/en-US/MPL/)';
+      return '![License: Mozilla](https://img.shields.io/badge/license-Mozilla-red.svg)';
     } else if (License === 'GNU') {
-      return '[![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+      return '![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue.svg)';
     } else if (License === 'None') {
       return '';
     };
