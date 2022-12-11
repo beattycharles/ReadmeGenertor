@@ -46,7 +46,8 @@ const renderLicenseLink = License => {
 function generateMarkdown(data) {
   return `
   # ${data.Title}
-  
+  ${renderLicenseBadge(data.License)}
+ 
   ## Table of Contents
   
   [Description](#description)<br>
@@ -72,14 +73,13 @@ function generateMarkdown(data) {
   ${data.Contrabution}
   
   ## Questions
-  ${data.Github}, <br>
-  ${data.Email};
+  My Github is ${data.Github}, <br>
+  You can reach me at ${data.Email} with any questions.;
 
   ## License
-  ${renderLicenseBadge(data.License)}<br>
-  ${renderLicenseLink(data.License)}
+  This project uses the ${renderLicenseLink(data.License)} license.
 
-  `};
+  `;};
   
 
 module.exports = generateMarkdown;
